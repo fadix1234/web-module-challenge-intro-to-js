@@ -18,7 +18,13 @@ Do the following:
    2. Console log true if age is 18 or higher
 
    HINT: no function required
-*/
+*/ const votingAge  = "18";
+if (votingAge >= 18){
+  console.log ("true");
+}else{
+  consult.log (false);
+}
+
 
 
 
@@ -32,7 +38,17 @@ Do the following:
    4. Console log the value of the 1st variable
 
    HINT: no function required
-*/
+*/ let dog = "sam";
+let behavior = "good";
+
+ if ( behavior === "good"){
+  dog = "Tom";
+  
+ }
+ console.log (dog);
+
+
+
 
 
 
@@ -47,7 +63,10 @@ Do the following:
    3. Console log the result
 
    HINT: look up the Number method
-*/
+*/ const birthday = "1990";
+console.log (Number (birthday));
+
+
 
 
 
@@ -61,9 +80,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
-  return num1 * num2;
+function multiply( a , b){
+  return a * b;
 }
+console.log (multiply (7,7));
 
 
 
@@ -77,9 +97,12 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
+
 }
+console.log (dogYears (28));
+
 
 
 
@@ -129,9 +152,24 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+if (age > = 1 && weight <= 5){
+    return weight * 0.05;
+} else if (age >= 1 && weight >= 6 && weight <= 10){
+  return weight * 0.04;
+}else if ( age >= 1 && weight >= 11 && weight <= 15){
+  return weight * 0.03;
+} else if (age >= 1 && weight > 15 ){
+  return weight * 0.02;
+} else if ( age < 1 && age >= 0.583){
+  return weight * 0.04;
+} else if ( age < 0.583 && age >= 0.333){
+  return weight * 0.05;
+} else if (age < 0.333){
+  return weight * 0.10;
 }
+console.log (hungryDog (15, 1));
+
 
 
 
@@ -154,11 +192,31 @@ Use the game function below to do the following:
  - tie should return "it's a tie"
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
-*/
+let computer = Math.random();
+
+if(computer <= 0.34){
+  computer = 'rock';
+}else if(computer <= 0.67){
+  computer = 'paper';
+}else if(computer > 0.67){
+  computer = 'scissors';
+}
 
 function game(user, computer){
-  /*add your code here*/
+ if(user === computer){
+  return `its a tie`;
+}else if(user === 'rock' && computer === 'scissors'){
+  return `you win!`;
+}else if(user === 'paper' && computer === 'rock'){
+  return `you win!`;
+}else if(user === 'scissors' && computer === 'paper'){
+  return `you win!`;
+}else{
+  return `you lose!`;
 }
+}
+
+  console.log(game('paper', computer));
 
 
 
