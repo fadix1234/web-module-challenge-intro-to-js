@@ -204,7 +204,7 @@ if(computer <= 0.34){
 
 function game(user, computer){
  if(user === computer){
-  return `its a tie`;
+  return `it's a tie`;
 }else if(user === 'rock' && computer === 'scissors'){
   return `you win!`;
 }else if(user === 'paper' && computer === 'rock'){
@@ -267,7 +267,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(number){
       for(let i = number; i > 0; i --){
-        return `${i} bottles of soda on the wall, ${i} bottles of soda take one down pass it around ${i-1} bottles of soda on the wall`;
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`;
       }
 }
 console.log (annoyingSong(8));
